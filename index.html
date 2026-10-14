@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,9 +22,9 @@
   --radius: 24px;
   --max: 1240px;
   --nav-height: 82px;
-  --glow-blue: rgba(81, 54, 181, 0.34);
-  --glow-cyan: rgba(181, 122, 236, 0.25);
-  --glow-gold: rgba(137, 111, 229, 0.25);
+  --glow-blue: rgba(181,105,54,.34);
+  --glow-cyan: rgba(232,169,105,.25);
+  --glow-gold: rgba(229,185,111,.25);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -134,7 +133,7 @@ button { font: inherit; }
 .hero {
   min-height: 100vh; min-height: 100svh; min-height: 100dvh;
   position: relative; display: flex; align-items: center; isolation: isolate;
-  overflow: hidden; background: #100b07;
+  overflow: hidden; background: transparent;
 }
 .hero-bg {
   position: absolute; inset: -12%; z-index: -3;
@@ -146,19 +145,15 @@ button { font: inherit; }
 .hero::after {
   content: ""; position: absolute; inset: 0; z-index: -2; pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(17,10,5,.91) 0%, rgba(24,14,8,.72) 32%, rgba(28,17,9,.25) 69%, rgba(18,11,6,.43) 100%),
-    linear-gradient(0deg, rgba(16,11,7,.91) 0%, rgba(16,11,7,.10) 52%, rgba(16,11,7,.32) 100%);
+    linear-gradient(90deg, rgba(10,10,10,.64) 0%, rgba(10,10,10,.38) 32%, rgba(10,10,10,.08) 69%, rgba(10,10,10,.15) 100%),
+    linear-gradient(0deg, rgba(10,10,10,.48) 0%, transparent 45%, rgba(10,10,10,.10) 100%);
 }
 .hero::before {
-  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
-  background:
-    radial-gradient(ellipse at 74% 28%, rgba(218,157,95,.18), transparent 36%),
-    radial-gradient(ellipse at 17% 72%, rgba(229,185,111,.16), transparent 38%),
-    radial-gradient(ellipse at 50% 0%, rgba(118,75,43,.18), transparent 48%);
+  content: none;
 }
 .hero-inner { width: min(calc(100% - 40px), var(--max)); margin-inline: auto; position: relative; z-index: 2; }
 .hero-content { width: 100%; max-width: 780px; padding-top: var(--nav-height); padding-bottom: 80px; text-align: left; animation: heroEntrance 1.1s cubic-bezier(.16,1,.3,1) both; }
-.hero h1 { font-size: clamp(48px,7vw,96px); line-height: .94; letter-spacing: -.055em; font-weight: 850; max-width: 800px; text-shadow: 0 0 32px rgba(229,185,111,.12), 0 8px 40px rgba(0,0,0,.35); }
+.hero h1 { font-size: clamp(48px,7vw,96px); line-height: .94; letter-spacing: -.055em; font-weight: 850; max-width: 800px; text-shadow: 0 0 32px rgba(247, 218, 169, 0.12), 0 8px 40px rgba(0,0,0,.35); }
 .hero h1 span {
   background: linear-gradient(110deg,#fff0cb,#e5b96f 38%,#fff0cb 65%,#c98b4f);
   background-size: 200% auto; color: transparent; -webkit-background-clip: text;
@@ -399,7 +394,11 @@ footer { padding: 55px 0 30px; background: #100b07; border-top: 1px solid var(--
   .nav-cta { text-align: center; margin-top: 5px; }
   .hero { min-height: 100svh; min-height: 100dvh; }
   .hero-bg { inset: -9%; background-position: center center; transform: translate3d(0,var(--hero-parallax,0px),0) scale(1.17); }
-  .hero::after { background: linear-gradient(180deg,rgba(17,10,5,.30) 0%,rgba(17,10,5,.52) 43%,rgba(16,11,7,.94) 100%),linear-gradient(90deg,rgba(17,10,5,.64),rgba(17,10,5,.12)); }
+  .hero::after {
+    background:
+      linear-gradient(180deg,rgba(10,10,10,.10) 0%,rgba(10,10,10,.28) 43%,rgba(10,10,10,.70) 100%),
+      linear-gradient(90deg,rgba(10,10,10,.28),transparent);
+  }
   .hero-content { max-width: 680px; padding-top: 105px; padding-bottom: 100px; }
   .hero h1 { max-width: 620px; }
   .hero-lead { max-width: 600px; }
@@ -564,7 +563,7 @@ footer { padding: 55px 0 30px; background: #100b07; border-top: 1px solid var(--
         <div><div class="logo-wrap"><img src="./images/Afriskillslogo.png" alt="Afriskill logo" loading="lazy"></div><div class="eco-number">05</div><h3>Afriskill</h3><p>Digital capability, product thinking, career growth and innovation readiness.</p></div><div class="eco-link">Visit platform ↗</div>
       </a>
       <a class="eco-card reveal delay-3" href="https://teenclub254.github.io/Zerah-Nexus/" target="_blank" rel="noopener">
-        <div><div class="logo-wrap"><img src="./images/teenclub.png" alt="Raw Creatives logo" loading="lazy"></div><div class="eco-number">04</div><h3>Teen Club</h3><p>A vibrant space for young people to discover talents, build confidence, explore new passions, and grow into future leaders.  ↗</div>
+        <div><div class="logo-wrap"><img src="./images/teenclub.png" alt="Teen Club logo" loading="lazy"></div><div class="eco-number">06</div><h3>Teen Club</h3><p>A vibrant space for young people to connect, discover talents, build confidence and grow into future leaders.</p></div><div class="eco-link">Visit platform ↗</div>
       </a>
     </div>
   </div>
